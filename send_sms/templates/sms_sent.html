@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Send SMS via Twilio</title>
+</head>
+<body>
+	<h1>Send SMS via Twilio</h1>
+	<form action="{% url 'send_sms_view' %}" method="post">
+		{% csrf_token %}
+			<label for="to">To:</label>
+			<input type="text" name="to" id="to" required><br><br>
+			<label for="body">Message:</label>
+			<textarea name="body" id="body" required></textarea><br><br>
+			<button type="submit">Send</button>
+		</form>
+
+
+		{% comment %} <label for="phone">Phone number:</label>
+		<input type="text" name="phone" id="phone" required><br><br>
+		<label for="message">Message:</label>
+		<textarea name="message" id="message" required></textarea><br><br>
+		<input type="submit" value="Send">
+	</form> {% endcomment %}
+</body>
+</html>
